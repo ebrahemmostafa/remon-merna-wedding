@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Layla & Omar — A Wedding Invitation · Dec 20, 2026</title>
+  <meta name="description" content="You are invited to celebrate the wedding of Layla & Omar — December 20, 2026, in Cairo, Egypt. A cinematic love story." />
+  <meta property="og:title" content="Layla & Omar — A Wedding Invitation" />
+  <meta property="og:description" content="Celebrate with us · December 20, 2026 · Cairo, Egypt." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader" class="preloader">
+    <div class="preloader__inner">
+      <svg width="80" height="80" viewBox="0 0 24 24" class="preloader__heart">
+        <path d="M12 21s-7-4.35-7-10a4 4 0 017-2.65A4 4 0 0119 11c0 5.65-7 10-7 10z" fill="none" stroke="oklch(0.85 0.06 75)" stroke-width="1.2" />
+      </svg>
+      <p class="preloader__label">You have received an invitation from</p>
+      <h1 class="preloader__name">Layla &amp; Omar</h1>
+    </div>
+  </div>
+
+  <!-- Scroll progress bar -->
+  <div id="scroll-progress" class="scroll-progress"></div>
+
+  <!-- Heart Path on the right edge -->
+  <svg class="heart-path" width="60" viewBox="0 0 60 1000" preserveAspectRatio="none" aria-hidden="true">
+    <path id="heart-path-curve" d="M 30 0 C 84 120, -24 220, 30 320 C 84 420, -24 550, 30 650 C 84 750, -24 880, 30 1000" fill="none" stroke="var(--burgundy)" stroke-opacity="0.28" stroke-width="1.4" stroke-dasharray="3 6" />
+    <g id="heart-path-marker">
+      <path d="M8 14.5s-5.2-3.2-5.2-7.4A2.9 2.9 0 018 4.2a2.9 2.9 0 015.2 2.9c0 4.2-5.2 7.4-5.2 7.4z" fill="var(--burgundy)" />
+    </g>
+  </svg>
+
+  <!-- Floating petals -->
+  <div id="petals" class="petals" aria-hidden="true"></div>
+
+  <!-- Audio toggle -->
+  <button id="audio-toggle" class="audio-toggle" aria-label="Play music">
+    <span class="audio-toggle__icon" id="audio-icon">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--burgundy)"><path d="M8 5v14l11-7z" /></svg>
+    </span>
+    <span class="audio-toggle__label" id="audio-label">music</span>
+  </button>
+
+  <main class="main">
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero__bg" data-parallax-bg>
+        <img src="assets/hero-bg.jpg" alt="Romantic rose petals on cream silk" />
+        <div class="hero__veil"></div>
+      </div>
+      <div class="hero__content">
+        <p class="hero__eyebrow reveal" data-delay="2600">✦  Save the date  ✦</p>
+        <h1 class="hero__title reveal" data-delay="2800">
+          Layla<span class="hero__amp">&amp;</span>Omar
+        </h1>
+        <div class="hero__rule reveal" data-delay="3400"></div>
+        <p class="hero__subtitle reveal" data-delay="3600">we are getting married</p>
+        <div class="hero__card reveal" data-delay="4000">
+          <div class="hero__card-col">
+            <span class="hero__small">Sunday</span>
+            <span class="hero__big">20</span>
+            <span class="hero__small">Dec 2026</span>
+          </div>
+          <div class="hero__divider"></div>
+          <div class="hero__card-col">
+            <span class="hero__small">Ceremony</span>
+            <span class="hero__big">8:00</span>
+            <span class="hero__small">in the evening</span>
+          </div>
+          <div class="hero__divider hero__divider--md"></div>
+          <div class="hero__card-col hero__card-col--md">
+            <span class="hero__small">Venue</span>
+            <span class="hero__big hero__big--sm">Al Bustan</span>
+            <span class="hero__small">Cairo · Egypt</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- PHOTO REVEAL -->
+    <section class="photo-reveal" data-parallax-section>
+      <div class="container">
+        <div class="section-head fade-in-up">
+          <p class="eyebrow">Two souls</p>
+          <h2 class="display-h2">one journey</h2>
+        </div>
+        <div class="photo-reveal__grid">
+          <div class="photo-reveal__card fade-in-up" data-parallax-y="80">
+            <img src="assets/petra.jpg" alt="Couple at Petra monastery" loading="lazy" />
+          </div>
+          <div class="photo-reveal__card photo-reveal__card--offset fade-in-up" data-parallax-y="120">
+            <img src="assets/beach-dance.jpg" alt="Couple dancing at sunset on beach" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOVE STORY -->
+    <section class="story">
+      <div class="container">
+        <div class="section-head fade-in-up">
+          <p class="eyebrow">Our story</p>
+          <h2 class="display-h2"><span class="doodle-underline">how it began</span></h2>
+        </div>
+        <div class="story__list">
+          <article class="chapter fade-in-up">
+            <div class="chapter__media"><img src="assets/cinema.jpg" alt="First glance" loading="lazy" /></div>
+            <div class="chapter__body">
+              <div class="chapter__year">❋ 2021</div>
+              <h3 class="display-h3">First glance</h3>
+              <div class="chapter__rule"></div>
+              <p>It was a quiet night, a small cinema, a shared bucket of popcorn. Hands found each other before words did.</p>
+            </div>
+          </article>
+          <article class="chapter chapter--reverse fade-in-up">
+            <div class="chapter__media"><img src="assets/painting.jpg" alt="Painting the world" loading="lazy" /></div>
+            <div class="chapter__body">
+              <div class="chapter__year">❋ 2022</div>
+              <h3 class="display-h3">Painting the world</h3>
+              <div class="chapter__rule"></div>
+              <p>We learned each other in colors — late nights, wine, laughter, and the mess of falling in love.</p>
+            </div>
+          </article>
+          <article class="chapter fade-in-up">
+            <div class="chapter__media"><img src="assets/pyramids-kiss.jpg" alt="Beneath the pyramids" loading="lazy" /></div>
+            <div class="chapter__body">
+              <div class="chapter__year">❋ 2024</div>
+              <h3 class="display-h3">Beneath the pyramids</h3>
+              <div class="chapter__rule"></div>
+              <p>Under a sky that has watched centuries of love, he asked. She said yes before he finished.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section class="countdown">
+      <div class="countdown__bg"></div>
+      <div class="container container--narrow">
+        <p class="eyebrow eyebrow--light fade-in-up">counting every moment</p>
+        <h2 class="display-h2 display-h2--light fade-in-up">until forever</h2>
+        <div class="countdown__grid" id="countdown">
+          <div class="countdown__cell"><div class="countdown__num" data-unit="days">00</div><div class="countdown__label">days</div></div>
+          <div class="countdown__cell"><div class="countdown__num" data-unit="hours">00</div><div class="countdown__label">hours</div></div>
+          <div class="countdown__cell"><div class="countdown__num" data-unit="minutes">00</div><div class="countdown__label">minutes</div></div>
+          <div class="countdown__cell"><div class="countdown__num" data-unit="seconds">00</div><div class="countdown__label">seconds</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALENDAR -->
+    <section class="calendar">
+      <div class="container container--narrow">
+        <div class="section-head section-head--sm fade-in-up">
+          <p class="eyebrow">save the date</p>
+          <h2 class="display-h2">December 2026</h2>
+        </div>
+        <div class="calendar__card fade-in-up">
+          <div class="calendar__grid" id="calendar-grid"></div>
+          <div class="calendar__footer">✦ Sunday · 8:00 pm ✦</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section class="location" data-parallax-section>
+      <div class="location__bg" data-parallax-bg>
+        <img src="assets/pyramids-walk.jpg" alt="Outdoor garden venue at sunset" loading="lazy" />
+        <div class="location__veil"></div>
+      </div>
+      <div class="location__content">
+        <p class="eyebrow eyebrow--light fade-in-up">where it happens</p>
+        <h2 class="display-h2 display-h2--light fade-in-up">Al Bustan Gardens</h2>
+        <p class="location__address fade-in-up">A private rose-lit garden under the Cairo sky.<br />Cairo, Egypt</p>
+        <a href="https://maps.google.com/?q=Cairo+Egypt" target="_blank" rel="noopener noreferrer" class="btn btn--ghost fade-in-up">open in maps →</a>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="timeline">
+      <div class="container container--narrow">
+        <div class="section-head fade-in-up">
+          <p class="eyebrow">the day</p>
+          <h2 class="display-h2">A timeline of joy</h2>
+        </div>
+        <ul class="timeline__list" id="timeline-list"></ul>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery">
+      <div class="container">
+        <div class="section-head fade-in-up">
+          <p class="eyebrow">moments</p>
+          <h2 class="display-h2">Frozen in time</h2>
+          <p class="gallery__hint">← drag to explore →</p>
+        </div>
+      </div>
+      <div class="gallery__viewport" id="gallery-viewport">
+        <div class="gallery__track" id="gallery-track"></div>
+      </div>
+    </section>
+
+    <!-- RSVP -->
+    <section class="rsvp">
+      <div class="container container--narrow">
+        <div class="section-head section-head--sm fade-in-up">
+          <p class="eyebrow">be with us</p>
+          <h2 class="display-h2">Kindly reply</h2>
+        </div>
+        <form id="rsvp-form" class="rsvp__form fade-in-up">
+          <div class="field">
+            <label>Your name</label>
+            <input type="text" name="name" required />
+          </div>
+          <div class="field">
+            <label>Email</label>
+            <input type="email" name="email" required />
+          </div>
+          <div class="field">
+            <label>Will you attend?</label>
+            <div class="radio-group">
+              <label class="radio">
+                <input type="radio" name="attend" value="yes" checked />
+                <span>Joyfully accept</span>
+              </label>
+              <label class="radio">
+                <input type="radio" name="attend" value="no" />
+                <span>Regretfully decline</span>
+              </label>
+            </div>
+          </div>
+          <div class="field">
+            <label>Number of guests</label>
+            <input type="number" name="guests" min="1" max="10" />
+          </div>
+          <div class="field">
+            <label>A note for us</label>
+            <textarea name="note" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary" id="rsvp-submit">
+            <span id="rsvp-submit-label">send rsvp</span>
+          </button>
+        </form>
+        <div class="rsvp__success" id="rsvp-success" hidden>
+          <div class="rsvp__heart">♥</div>
+          <h3 class="display-h3">Thank you, beautifully received.</h3>
+          <p>We can't wait to see you in December.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL -->
+    <section class="final">
+      <div class="container container--narrow fade-in-up">
+        <p class="eyebrow">with all our love</p>
+        <h2 class="final__title">We can't wait<br /><span class="text-gradient-rose">to celebrate with you.</span></h2>
+        <div class="final__rule"></div>
+        <p class="final__signature">Layla &amp; Omar</p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__col">layla &amp; omar</div>
+        <div class="footer__col footer__col--center">forever, beginning december twenty</div>
+        <div class="footer__col">cairo · 2026</div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="js/script.js"></script>
+<script src="../invitation-language-switch.js"></script>
+</body>
+</html>
