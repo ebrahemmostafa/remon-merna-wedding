@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Layla & Omar — A Wedding Invitation · Dec 20, 2026</title>
-  <meta name="description" content="You are invited to celebrate the wedding of Layla & Omar — December 20, 2026, in Cairo, Egypt. A cinematic love story." />
-  <meta property="og:title" content="Layla & Omar — A Wedding Invitation" />
-  <meta property="og:description" content="Celebrate with us · December 20, 2026 · Cairo, Egypt." />
+  <title>Remon & Merna — A Wedding Invitation · Aug 30, 2026</title>
+  <meta name="description" content="You are invited to celebrate the wedding of Remon & Merna — August 30, 2026, in Cairo, Egypt. A cinematic love story." />
+  <meta property="og:title" content="Remon & Merna — A Wedding Invitation" />
+  <meta property="og:description" content="Celebrate with us · August 30, 2026 · Cairo, Egypt." />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,16 +14,22 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <!-- Preloader -->
-  <div id="preloader" class="preloader">
-    <div class="preloader__inner">
-      <svg width="80" height="80" viewBox="0 0 24 24" class="preloader__heart">
-        <path d="M12 21s-7-4.35-7-10a4 4 0 017-2.65A4 4 0 0119 11c0 5.65-7 10-7 10z" fill="none" stroke="oklch(0.85 0.06 75)" stroke-width="1.2" />
-      </svg>
-      <p class="preloader__label">You have received an invitation from</p>
-      <h1 class="preloader__name">Layla &amp; Omar</h1>
+  <!-- Envelope Intro -->
+  <div class="envelope-wrapper" id="envelopeWrapper">
+    <div class="envelope" id="envelope">
+      <div class="flap"></div>
+      <div class="card-peek">
+        <div class="inner">
+          <p class="small">The grand celebration of</p>
+          <h3>Remon <em>&amp;</em> Merna</h3>
+        </div>
+      </div>
+      <div class="body-env"></div>
+      <div class="seal"><img src="assets/ChatGPT Image Jun 27, 2026, 08_02_08 PM.png" alt="Wax seal" decoding="async"></div>
+      <span class="tap">Tap to open</span>
     </div>
   </div>
+  <canvas id="particles"></canvas>
 
   <!-- Scroll progress bar -->
   <div id="scroll-progress" class="scroll-progress"></div>
@@ -57,26 +63,26 @@
       <div class="hero__content">
         <p class="hero__eyebrow reveal" data-delay="2600">✦  Save the date  ✦</p>
         <h1 class="hero__title reveal" data-delay="2800">
-          Layla<span class="hero__amp">&amp;</span>Omar
+          Remon<span class="hero__amp">&amp;</span>Merna
         </h1>
         <div class="hero__rule reveal" data-delay="3400"></div>
         <p class="hero__subtitle reveal" data-delay="3600">we are getting married</p>
         <div class="hero__card reveal" data-delay="4000">
           <div class="hero__card-col">
             <span class="hero__small">Sunday</span>
-            <span class="hero__big">20</span>
-            <span class="hero__small">Dec 2026</span>
+            <span class="hero__big">30</span>
+            <span class="hero__small">Aug 2026</span>
           </div>
           <div class="hero__divider"></div>
           <div class="hero__card-col">
             <span class="hero__small">Ceremony</span>
-            <span class="hero__big">8:00</span>
+            <span class="hero__big">6:00</span>
             <span class="hero__small">in the evening</span>
           </div>
           <div class="hero__divider hero__divider--md"></div>
           <div class="hero__card-col hero__card-col--md">
-            <span class="hero__small">Venue</span>
-            <span class="hero__big hero__big--sm">Al Bustan</span>
+            <span class="hero__small">Locations</span>
+            <span class="hero__big hero__big--sm">Giza &amp; Zamalek</span>
             <span class="hero__small">Cairo · Egypt</span>
           </div>
         </div>
@@ -91,13 +97,8 @@
           <p class="eyebrow">Two souls</p>
           <h2 class="display-h2">one journey</h2>
         </div>
-        <div class="photo-reveal__grid">
-          <div class="photo-reveal__card fade-in-up" data-parallax-y="80">
-            <img src="assets/petra.jpg" alt="Couple at Petra monastery" loading="lazy" />
-          </div>
-          <div class="photo-reveal__card photo-reveal__card--offset fade-in-up" data-parallax-y="120">
-            <img src="assets/beach-dance.jpg" alt="Couple dancing at sunset on beach" loading="lazy" />
-          </div>
+        <div class="photo-reveal__single fade-in-up" data-parallax-y="80">
+          <img src="assets/728277892_1016595234196831_1681627395698772978_n.jpg" alt="Remon and Merna romantic dinner" loading="lazy" />
         </div>
       </div>
     </section>
@@ -111,30 +112,30 @@
         </div>
         <div class="story__list">
           <article class="chapter fade-in-up">
-            <div class="chapter__media"><img src="assets/cinema.jpg" alt="First glance" loading="lazy" /></div>
+            <div class="chapter__media"><img src="assets/727988894_1892937321399738_5812794901894357382_n.jpg" alt="First glance" loading="lazy" /></div>
             <div class="chapter__body">
               <div class="chapter__year">❋ 2021</div>
-              <h3 class="display-h3">First glance</h3>
+              <h3 class="display-h3">The first smile</h3>
               <div class="chapter__rule"></div>
-              <p>It was a quiet night, a small cinema, a shared bucket of popcorn. Hands found each other before words did.</p>
+              <p>A simple meeting that sparked an extraordinary connection. It didn't take long for us to realize we had found something special.</p>
             </div>
           </article>
           <article class="chapter chapter--reverse fade-in-up">
-            <div class="chapter__media"><img src="assets/painting.jpg" alt="Painting the world" loading="lazy" /></div>
+            <div class="chapter__media"><img src="assets/728369645_879745145182363_1172560505099690440_n.jpg" alt="Building memories" loading="lazy" /></div>
             <div class="chapter__body">
               <div class="chapter__year">❋ 2022</div>
-              <h3 class="display-h3">Painting the world</h3>
+              <h3 class="display-h3">Building memories</h3>
               <div class="chapter__rule"></div>
-              <p>We learned each other in colors — late nights, wine, laughter, and the mess of falling in love.</p>
+              <p>Through countless conversations and shared adventures, our bond grew stronger with every passing day.</p>
             </div>
           </article>
           <article class="chapter fade-in-up">
-            <div class="chapter__media"><img src="assets/pyramids-kiss.jpg" alt="Beneath the pyramids" loading="lazy" /></div>
+            <div class="chapter__media"><img src="assets/728462402_27925573690368474_8689696960173259662_n.jpg" alt="The big question" loading="lazy" /></div>
             <div class="chapter__body">
               <div class="chapter__year">❋ 2024</div>
-              <h3 class="display-h3">Beneath the pyramids</h3>
+              <h3 class="display-h3">A lifelong promise</h3>
               <div class="chapter__rule"></div>
-              <p>Under a sky that has watched centuries of love, he asked. She said yes before he finished.</p>
+              <p>Surrounded by love and joy, we made the easiest decision of our lives: to be together forever.</p>
             </div>
           </article>
         </div>
@@ -161,11 +162,11 @@
       <div class="container container--narrow">
         <div class="section-head section-head--sm fade-in-up">
           <p class="eyebrow">save the date</p>
-          <h2 class="display-h2">December 2026</h2>
+          <h2 class="display-h2">August 2026</h2>
         </div>
         <div class="calendar__card fade-in-up">
           <div class="calendar__grid" id="calendar-grid"></div>
-          <div class="calendar__footer">✦ Sunday · 8:00 pm ✦</div>
+          <div class="calendar__footer">✦ Sunday · 6:00 pm ✦</div>
         </div>
       </div>
     </section>
@@ -173,27 +174,33 @@
     <!-- LOCATION -->
     <section class="location" data-parallax-section>
       <div class="location__bg" data-parallax-bg>
-        <img src="assets/pyramids-walk.jpg" alt="Outdoor garden venue at sunset" loading="lazy" />
+        <img src="assets/wedding_hall_names.png" alt="Luxurious Wedding Hall with Remon and Maria" loading="lazy" />
         <div class="location__veil"></div>
       </div>
       <div class="location__content">
         <p class="eyebrow eyebrow--light fade-in-up">where it happens</p>
-        <h2 class="display-h2 display-h2--light fade-in-up">Al Bustan Gardens</h2>
-        <p class="location__address fade-in-up">A private rose-lit garden under the Cairo sky.<br />Cairo, Egypt</p>
-        <a href="https://maps.google.com/?q=Cairo+Egypt" target="_blank" rel="noopener noreferrer" class="btn btn--ghost fade-in-up">open in maps →</a>
+        
+        <div class="locations-grid fade-in-up">
+          <div class="location-item">
+            <h3 class="display-h3 display-h3--light">The Church</h3>
+            <p class="location-time">6:00 PM — 7:00 PM</p>
+            <p class="location__address" style="direction: rtl;">5 ش الحجاز متفرع من ش جامعة الدول العربية<br>المهندسين, الجيزة قريب من وفد الاتحاد</p>
+            <a href="https://goo.gl/maps/Qw4KXQR7ynRgTdPt6?g_st=ac" target="_blank" rel="noopener noreferrer" class="btn btn--ghost">open in maps →</a>
+          </div>
+
+          <div class="location-divider"></div>
+
+          <div class="location-item">
+            <h3 class="display-h3 display-h3--light">Wedding Hall</h3>
+            <p class="location-time">8:00 PM — 12:00 AM</p>
+            <p class="location__address" style="direction: rtl;">دار المراسم لضباط الشرطة – شارع حديقة الزهرية<br>أمام برج القاهرة – الزمالك</p>
+            <a href="https://maps.app.goo.gl/Xvzy98qbDVQPbin78?g_st=ac" target="_blank" rel="noopener noreferrer" class="btn btn--ghost">open in maps →</a>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- TIMELINE -->
-    <section class="timeline">
-      <div class="container container--narrow">
-        <div class="section-head fade-in-up">
-          <p class="eyebrow">the day</p>
-          <h2 class="display-h2">A timeline of joy</h2>
-        </div>
-        <ul class="timeline__list" id="timeline-list"></ul>
-      </div>
-    </section>
+
 
     <!-- GALLERY -->
     <section class="gallery">
@@ -264,15 +271,15 @@
         <p class="eyebrow">with all our love</p>
         <h2 class="final__title">We can't wait<br /><span class="text-gradient-rose">to celebrate with you.</span></h2>
         <div class="final__rule"></div>
-        <p class="final__signature">Layla &amp; Omar</p>
+        <p class="final__signature">Remon &amp; Merna</p>
       </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="footer">
       <div class="container footer__inner">
-        <div class="footer__col">layla &amp; omar</div>
-        <div class="footer__col footer__col--center">forever, beginning december twenty</div>
+        <div class="footer__col">remon &amp; merna</div>
+        <div class="footer__col footer__col--center">forever, beginning august thirty</div>
         <div class="footer__col">cairo · 2026</div>
       </div>
     </footer>

@@ -2,15 +2,55 @@
 (function () {
   'use strict';
 
-  // ============= Preloader =============
+  // ============= Envelope Intro =============
   window.addEventListener('load', function () {
-    setTimeout(function () {
-      var pre = document.getElementById('preloader');
-      if (!pre) return;
-      pre.classList.add('fade');
-      setTimeout(function () { pre.style.display = 'none'; }, 900);
-    }, 2400);
+    var env = document.getElementById('envelope'),
+        wrapper = document.getElementById('envelopeWrapper');
+    if (!env || !wrapper) return;
+    env.addEventListener('click', function () {
+      env.classList.add('open');
+      setTimeout(function () {
+        wrapper.classList.add('opened');
+        document.body.style.overflow = 'auto';
+        // After fade out, remove it entirely
+        setTimeout(function() { wrapper.style.display = 'none'; }, 800);
+      }, 1200);
+    });
+    // Lock scroll while envelope is active
+    document.body.style.overflow = 'hidden';
   });
+
+  // ============= Particles =============
+  var canvas = document.getElementById('particles');
+  if (canvas) {
+    var ctx = canvas.getContext('2d'), W, H, sparks = [];
+    function resizeCanvas() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+    function Spark() { this.reset(); }
+    Spark.prototype.reset = function() {
+      this.x = Math.random() * W; this.y = Math.random() * H;
+      this.size = Math.random() * 1.5 + 0.5; this.opacity = 0;
+      this.maxOp = Math.random() * 0.5 + 0.2; this.phase = Math.random() * Math.PI * 2;
+      this.speed = Math.random() * 0.03 + 0.01;
+      this.color = Math.random() > 0.4 ? '212,175,55' : '139,26,43';
+    };
+    Spark.prototype.update = function() {
+      this.phase += this.speed;
+      this.opacity = this.maxOp * (0.5 + 0.5 * Math.sin(this.phase));
+    };
+    Spark.prototype.draw = function() {
+      ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(' + this.color + ',' + this.opacity + ')'; ctx.fill();
+    };
+    for (var i = 0; i < 80; i++) sparks.push(new Spark());
+    function animateParticles() {
+      ctx.clearRect(0, 0, W, H);
+      for (var j = 0; j < sparks.length; j++) { sparks[j].update(); sparks[j].draw(); }
+      requestAnimationFrame(animateParticles);
+    }
+    animateParticles();
+  }
 
   // ============= Reveal animations =============
   function setupReveals() {
@@ -156,7 +196,7 @@
 
   // ============= Countdown =============
   (function countdown() {
-    var TARGET = new Date('2026-12-20T20:00:00').getTime();
+    var TARGET = new Date('2026-08-30T18:00:00').getTime();
     var nums = {
       days: document.querySelector('[data-unit="days"]'),
       hours: document.querySelector('[data-unit="hours"]'),
@@ -189,7 +229,7 @@
     setInterval(tick, 1000);
   })();
 
-  // ============= Calendar (December 2026) =============
+  // ============= Calendar (August 2026) =============
   (function calendar() {
     var grid = document.getElementById('calendar-grid');
     if (!grid) return;
@@ -198,10 +238,10 @@
     weekdays.forEach(function (d) {
       html += '<div class="calendar__weekday">' + d + '</div>';
     });
-    // December 1, 2026 = Tuesday => offset 2
-    for (var b = 0; b < 2; b++) html += '<div></div>';
+    // August 1, 2026 = Saturday => offset 6
+    for (var b = 0; b < 6; b++) html += '<div></div>';
     for (var d = 1; d <= 31; d++) {
-      if (d === 20) {
+      if (d === 30) {
         html += '<div class="calendar__day calendar__day--target"><span>' + d + '</span></div>';
       } else {
         html += '<div class="calendar__day">' + d + '</div>';
@@ -210,42 +250,7 @@
     grid.innerHTML = html;
   })();
 
-  // ============= Timeline =============
-  (function timeline() {
-    var list = document.getElementById('timeline-list');
-    if (!list) return;
-    var events = [
-      { time: '7:30 PM', title: 'Guest Arrival', desc: 'Welcome drinks in the rose courtyard.' },
-      { time: '8:00 PM', title: 'Ceremony', desc: 'Vows beneath the floral arch, under the evening sky.' },
-      { time: '9:00 PM', title: 'Cocktail Hour', desc: 'Live oud, signature drinks, golden lantern light.' },
-      { time: '10:00 PM', title: 'Dinner', desc: 'A long table beneath the stars.' },
-      { time: '11:30 PM', title: 'First Dance', desc: 'Followed by dancing till the small hours.' },
-      { time: '2:00 AM', title: 'Send-off', desc: 'Sparklers and goodbyes.' }
-    ];
-    var html = '';
-    events.forEach(function (e) {
-      html +=
-        '<li class="timeline__item fade-in-up">' +
-          '<div class="timeline__body">' +
-            '<div class="timeline__time">' + e.time + '</div>' +
-            '<h3>' + e.title + '</h3>' +
-            '<p>' + e.desc + '</p>' +
-          '</div>' +
-        '</li>';
-    });
-    list.innerHTML = html;
-    // Re-observe new fade-in-up nodes
-    if ('IntersectionObserver' in window) {
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) { entry.target.classList.add('in-view'); io.unobserve(entry.target); }
-        });
-      }, { threshold: 0.15, rootMargin: '0px 0px -80px 0px' });
-      list.querySelectorAll('.fade-in-up').forEach(function (el) { io.observe(el); });
-    } else {
-      list.querySelectorAll('.fade-in-up').forEach(function (el) { el.classList.add('in-view'); });
-    }
-  })();
+
 
   // ============= Gallery (drag carousel) =============
   (function gallery() {
@@ -254,13 +259,13 @@
     if (!track || !viewport) return;
 
     var images = [
-      'assets/petra.jpg',
-      'assets/pyramids-kiss.jpg',
-      'assets/pyramids-walk.jpg',
-      'assets/sunset-hand.jpg',
-      'assets/beach-dance.jpg',
-      'assets/painting.jpg',
-      'assets/cinema.jpg'
+      'assets/728794263_1371062741591343_2243715108055338700_n.jpg',
+      'assets/729274999_27453614180937499_8724656182512639358_n.jpg',
+      'assets/729805017_1902110687413106_4152212880396723117_n.jpg',
+      'assets/729867222_1222629649896504_549852881024600169_n.jpg',
+      'assets/730119738_857668420331631_9185348303182799111_n.jpg',
+      'assets/730381465_994016243497929_8474184883426322672_n.jpg',
+      'assets/730948671_878111258091889_7783175716211364677_n.jpg'
     ];
     var html = '';
     images.forEach(function (src, i) {
