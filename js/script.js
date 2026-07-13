@@ -174,7 +174,7 @@
         }, 40);
         playing = false;
         icon.innerHTML = playSvg;
-        label.textContent = 'music';
+        label.textContent = (typeof translations !== 'undefined' && document.documentElement.lang === 'ar') ? translations.ar['music'] : 'music';
         btn.setAttribute('aria-label', 'Play music');
       } else {
         audio.volume = 0;
@@ -188,7 +188,7 @@
         }, 60);
         playing = true;
         icon.innerHTML = barsSvg;
-        label.textContent = 'playing';
+        label.textContent = (typeof translations !== 'undefined' && document.documentElement.lang === 'ar') ? translations.ar['playing'] : 'playing';
         btn.setAttribute('aria-label', 'Pause music');
       }
     });

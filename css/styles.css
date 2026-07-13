@@ -616,43 +616,134 @@ canvas#particles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
   background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 8'><path d='M0 4 Q 25 0 50 4 T 100 4' stroke='%23682a25' stroke-width='1.5' fill='none'/></svg>") no-repeat center / 100% 100%;
   opacity: 0.6;
 }
-/* Language Switcher */
+/* ============= Language Switcher ============= */
 .lang-toggle-btn {
   position: fixed;
-  top: 2rem;
-  right: 2rem;
-  z-index: 100;
-  background: var(--bg);
+  top: 1.2rem;
+  right: 1.2rem;
+  z-index: 90; /* below envelope (z-index 100+) */
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border: 1px solid var(--gold);
   color: var(--burgundy);
-  padding: 0.5rem 1rem;
-  font-family: var(--font-serif);
-  font-size: 1rem;
+  padding: 0.45rem 1.1rem;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 500;
   cursor: pointer;
-  border-radius: 4px;
-  transition: all 0.3s ease;
+  border-radius: 6px;
+  transition: background 0.3s var(--ease-luxury), color 0.3s var(--ease-luxury), transform 0.2s;
+  letter-spacing: 0.03em;
 }
 
 .lang-toggle-btn:hover {
   background: var(--burgundy);
-  color: var(--bg);
+  color: var(--cream);
+  transform: translateY(-1px);
 }
 
-/* RTL Support */
+/* Hide toggle behind the envelope overlay */
+.envelope-wrapper:not(.opened) ~ .lang-toggle-btn { display: none; }
+
+/* RTL: move toggle to left */
+[dir="rtl"] .lang-toggle-btn {
+  right: auto;
+  left: 1.2rem;
+}
+
+/* ============= RTL Support ============= */
 [dir="rtl"] {
   text-align: right;
 }
 
-/* Specific Arabic Font Overrides */
-[dir="rtl"] .display-h2,
-[dir="rtl"] .display-h3,
-[dir="rtl"] .hero__title,
-[dir="rtl"] .final__title {
-  font-family: var(--font-sans); /* Use a sans-serif or system Arabic font for better readability if desired, or keep default */
-  line-height: 1.5;
+/* Centered sections should stay centered */
+[dir="rtl"] .section-head,
+[dir="rtl"] .countdown,
+[dir="rtl"] .calendar,
+[dir="rtl"] .rsvp,
+[dir="rtl"] .final,
+[dir="rtl"] .hero__content,
+[dir="rtl"] .footer__inner {
+  text-align: center;
 }
 
-/* Calendar RTL alignment fixes */
+/* Arabic text uses system Arabic fonts for readability */
+.ar-active {
+  font-family: "Inter", "Segoe UI", "Tahoma", system-ui, sans-serif;
+}
+.ar-active .display-h2,
+.ar-active .display-h3,
+.ar-active .hero__title,
+.ar-active .final__title,
+.ar-active .final__signature,
+.ar-active h1, .ar-active h2, .ar-active h3 {
+  font-family: "Cormorant Garamond", "Traditional Arabic", "Segoe UI", serif;
+  line-height: 1.6;
+}
+
+/* Heart path: flip to left side in RTL */
+[dir="rtl"] .heart-path {
+  right: auto;
+  left: 0;
+  transform: scaleX(-1);
+}
+
+/* Story chapters: reverse layout direction */
+[dir="rtl"] .chapter {
+  flex-direction: row-reverse;
+}
+[dir="rtl"] .chapter--reverse {
+  flex-direction: row;
+}
+
+/* Gallery: keep LTR so dragging works naturally */
+[dir="rtl"] .gallery__viewport,
+[dir="rtl"] .gallery__track {
+  direction: ltr;
+}
+/* But the gallery heading should still be RTL */
+[dir="rtl"] .gallery .section-head {
+  direction: rtl;
+}
+
+/* Calendar: keep LTR for the grid */
 [dir="rtl"] .calendar__card {
-  direction: ltr; /* keep calendar left to right for dates */
+  direction: ltr;
+}
+
+/* Countdown: keep LTR for numbers */
+[dir="rtl"] .countdown__grid {
+  direction: ltr;
+}
+
+/* Location grid: keep centered */
+[dir="rtl"] .locations-grid {
+  text-align: center;
+}
+
+/* RSVP form: align inputs */
+[dir="rtl"] .rsvp__form input,
+[dir="rtl"] .rsvp__form textarea {
+  text-align: right;
+}
+[dir="rtl"] .rsvp__form label {
+  text-align: right;
+  display: block;
+}
+
+/* Audio toggle: move to left in RTL */
+[dir="rtl"] .audio-toggle {
+  right: auto;
+  left: 24px;
+}
+
+/* Scroll progress: flip origin in RTL */
+[dir="rtl"] .scroll-progress {
+  transform-origin: right center;
+}
+
+/* Footer: keep centered */
+[dir="rtl"] .footer__col {
+  text-align: center;
 }

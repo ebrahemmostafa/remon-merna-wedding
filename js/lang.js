@@ -1,44 +1,60 @@
+/* ===== Language Switcher ===== */
 const translations = {
   ar: {
+    // Envelope
     "The grand celebration of": "الاحتفال الكبير بزفاف",
-    "Remon <em>&amp;</em> Merna": "ريمون <em>و</em> ميرنا",
+    "envelope-names": "ريمون و ميرنا",
     "Tap to open": "اضغط للفتح",
-    "✦  Save the date  ✦": "✦ احفظوا التاريخ ✦",
+
+    // Hero
+    "save-the-date-hero": "✦ احفظوا التاريخ ✦",
     "we are getting married": "سنتزوج",
     "Sunday": "الأحد",
-    "30": "30",
     "Aug 2026": "أغسطس 2026",
     "Ceremony": "المراسم",
-    "6:00": "6:00",
     "in the evening": "مساءً",
     "Locations": "الأماكن",
-    "Giza & Zamalek": "الجيزة والزمالك",
+    "Giza-Zamalek": "الجيزة والزمالك",
     "Cairo · Egypt": "القاهرة · مصر",
+
+    // Photo reveal
     "Two souls": "روحان",
     "one journey": "رحلة واحدة",
+
+    // Love story
     "Our story": "قصتنا",
     "how it began": "كيف بدأت",
     "story1": "ما كان لقاؤنا صدفةً، كان تدبير الله ليجعل منكِ شريكة حياتي، والحكاية التي أريد أن أعيشها للأبد",
     "story2": "اخترتُكِ اليوم.. وسأختاركِ في كل غدٍ يأتي",
     "story3": "لم نجد في بعضنا الحب فحسب، بل وجدنا الطمأنينة التي تجعل كل شيء يبدو هيناً وممكناً.",
+
+    // Countdown
     "counting every moment": "نعد كل لحظة",
     "until forever": "حتى الأبد",
     "days": "أيام",
     "hours": "ساعات",
     "minutes": "دقائق",
     "seconds": "ثواني",
+
+    // Calendar
     "save the date": "احفظوا التاريخ",
     "August 2026": "أغسطس 2026",
-    "✦ Sunday · 6:00 pm ✦": "✦ الأحد · 6:00 مساءً ✦",
+    "calendar-footer": "✦ الأحد · 6:00 مساءً ✦",
+
+    // Location
     "where it happens": "حيث يتم الحدث",
     "The Church": "الكنيسة",
     "6:00 PM — 7:00 PM": "6:00 مساءً — 7:00 مساءً",
-    "open in maps →": "افتح في الخرائط ←",
+    "open in maps": "افتح في الخرائط ←",
     "Wedding Hall": "قاعة الزفاف",
     "8:00 PM — 12:00 AM": "8:00 مساءً — 12:00 صباحاً",
+
+    // Gallery
     "moments": "لحظات",
     "Frozen in time": "مجمدة في الزمن",
-    "← drag to explore →": "← اسحب للاستكشاف →",
+    "drag-hint": "← اسحب للاستكشاف →",
+
+    // RSVP
     "be with us": "كن معنا",
     "Kindly reply": "نرجو الرد",
     "Your name": "الاسم",
@@ -49,58 +65,81 @@ const translations = {
     "Number of guests": "عدد الضيوف",
     "A note for us": "ملاحظة لنا",
     "send rsvp": "إرسال",
-    "Thank you, beautifully received.": "شكراً لك، تم الاستلام بنجاح.",
-    "We can't wait to see you in August.": "نحن متشوقون لرؤيتك في أغسطس.",
+    "rsvp-thanks": "شكراً لك، تم الاستلام بنجاح.",
+    "rsvp-see-you": "نحن متشوقون لرؤيتك في أغسطس.",
+
+    // Final
     "with all our love": "مع كل حبنا",
-    "We can't wait<br /><span class=\"text-gradient-rose\">to celebrate with you.</span>": "نحن متشوقون<br /><span class=\"text-gradient-rose\">للاحتفال معكم.</span>",
-    "Remon & Merna": "ريمون وميرنا",
-    "remon & merna": "ريمون وميرنا",
-    "forever, beginning august thirty": "إلى الأبد، بدءاً من الثلاثين من أغسطس",
-    "cairo · 2026": "القاهرة · 2026",
+    "final-title": "نحن متشوقون<br /><span class=\"text-gradient-rose\">للاحتفال معكم.</span>",
+    "final-signature": "ريمون وميرنا",
+
+    // Footer
+    "footer-names": "ريمون وميرنا",
+    "footer-tagline": "إلى الأبد، بدءاً من الثلاثين من أغسطس",
+    "footer-location": "القاهرة · 2026",
+
+    // Audio
     "music": "موسيقى",
     "playing": "يعمل",
+
+    // Toggle label
     "LangToggle": "En"
   },
   en: {
+    // Envelope
     "The grand celebration of": "The grand celebration of",
-    "Remon <em>&amp;</em> Merna": "Remon <em>&amp;</em> Merna",
+    "envelope-names": "Remon <em>&amp;</em> Merna",
     "Tap to open": "Tap to open",
-    "✦  Save the date  ✦": "✦  Save the date  ✦",
+
+    // Hero
+    "save-the-date-hero": "✦  Save the date  ✦",
     "we are getting married": "we are getting married",
     "Sunday": "Sunday",
-    "30": "30",
     "Aug 2026": "Aug 2026",
     "Ceremony": "Ceremony",
-    "6:00": "6:00",
     "in the evening": "in the evening",
     "Locations": "Locations",
-    "Giza & Zamalek": "Giza & Zamalek",
+    "Giza-Zamalek": "Giza & Zamalek",
     "Cairo · Egypt": "Cairo · Egypt",
+
+    // Photo reveal
     "Two souls": "Two souls",
     "one journey": "one journey",
+
+    // Love story
     "Our story": "Our story",
     "how it began": "how it began",
-    "story1": "I’ve loved you for a lifetime in my dreams, today it becomes reality",
+    "story1": "I\u2019ve loved you for a lifetime in my dreams, today it becomes reality",
     "story2": "My heart had been searching for yours, long before our paths ever crossed",
     "story3": "We are choosing each other, today and every day after",
+
+    // Countdown
     "counting every moment": "counting every moment",
     "until forever": "until forever",
     "days": "days",
     "hours": "hours",
     "minutes": "minutes",
     "seconds": "seconds",
+
+    // Calendar
     "save the date": "save the date",
     "August 2026": "August 2026",
-    "✦ Sunday · 6:00 pm ✦": "✦ Sunday · 6:00 pm ✦",
+    "calendar-footer": "✦ Sunday · 6:00 pm ✦",
+
+    // Location
     "where it happens": "where it happens",
     "The Church": "The Church",
     "6:00 PM — 7:00 PM": "6:00 PM — 7:00 PM",
-    "open in maps →": "open in maps →",
+    "open in maps": "open in maps →",
     "Wedding Hall": "Wedding Hall",
     "8:00 PM — 12:00 AM": "8:00 PM — 12:00 AM",
+
+    // Gallery
     "moments": "moments",
     "Frozen in time": "Frozen in time",
-    "← drag to explore →": "← drag to explore →",
+    "drag-hint": "← drag to explore →",
+
+    // RSVP
     "be with us": "be with us",
     "Kindly reply": "Kindly reply",
     "Your name": "Your name",
@@ -111,48 +150,70 @@ const translations = {
     "Number of guests": "Number of guests",
     "A note for us": "A note for us",
     "send rsvp": "send rsvp",
-    "Thank you, beautifully received.": "Thank you, beautifully received.",
-    "We can't wait to see you in August.": "We can't wait to see you in August.",
+    "rsvp-thanks": "Thank you, beautifully received.",
+    "rsvp-see-you": "We can\u2019t wait to see you in August.",
+
+    // Final
     "with all our love": "with all our love",
-    "We can't wait<br /><span class=\"text-gradient-rose\">to celebrate with you.</span>": "We can't wait<br /><span class=\"text-gradient-rose\">to celebrate with you.</span>",
-    "Remon & Merna": "Remon & Merna",
-    "remon & merna": "remon & merna",
-    "forever, beginning august thirty": "forever, beginning august thirty",
-    "cairo · 2026": "cairo · 2026",
+    "final-title": "We can\u2019t wait<br /><span class=\"text-gradient-rose\">to celebrate with you.</span>",
+    "final-signature": "Remon & Merna",
+
+    // Footer
+    "footer-names": "remon & merna",
+    "footer-tagline": "forever, beginning august thirty",
+    "footer-location": "cairo · 2026",
+
+    // Audio
     "music": "music",
     "playing": "playing",
+
+    // Toggle label
     "LangToggle": "العربية"
   }
 };
 
-document.addEventListener('DOMContentLoaded', () => {
-  const langToggleBtn = document.getElementById('lang-toggle-btn');
-  let currentLang = 'en';
+// Keys whose translations contain HTML and must use innerHTML
+const htmlKeys = new Set([
+  "envelope-names",
+  "final-title"
+]);
 
-  if (langToggleBtn) {
-    langToggleBtn.addEventListener('click', () => {
-      currentLang = currentLang === 'en' ? 'ar' : 'en';
-      document.documentElement.lang = currentLang;
-      document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
-      
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (translations[currentLang][key]) {
-          if (key === "We can't wait<br /><span class=\"text-gradient-rose\">to celebrate with you.</span>" || key === "Remon <em>&amp;</em> Merna") {
-            el.innerHTML = translations[currentLang][key];
-          } else if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
-            el.placeholder = translations[currentLang][key];
-          } else {
-            el.textContent = translations[currentLang][key];
-          }
-        }
-      });
-      
-      // Update toggle button text
-      langToggleBtn.textContent = translations[currentLang]['LangToggle'];
-      
-      // Toggle a class on body to apply specific Arabic styles like font-family
-      document.body.classList.toggle('ar-font', currentLang === 'ar');
-    });
-  }
+document.addEventListener('DOMContentLoaded', function () {
+  var langToggleBtn = document.getElementById('lang-toggle-btn');
+  var currentLang = 'en';
+
+  if (!langToggleBtn) return;
+
+  langToggleBtn.addEventListener('click', function () {
+    currentLang = currentLang === 'en' ? 'ar' : 'en';
+
+    // Set document direction and language
+    document.documentElement.lang = currentLang;
+    document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+
+    // Translate all elements with data-i18n
+    var elements = document.querySelectorAll('[data-i18n]');
+    for (var i = 0; i < elements.length; i++) {
+      var el = elements[i];
+      var key = el.getAttribute('data-i18n');
+      var val = translations[currentLang][key];
+      if (val === undefined) continue;
+
+      if (htmlKeys.has(key)) {
+        el.innerHTML = val;
+      } else {
+        el.textContent = val;
+      }
+    }
+
+    // Update toggle button text
+    langToggleBtn.textContent = translations[currentLang]['LangToggle'];
+
+    // Toggle body class for Arabic-specific styles
+    if (currentLang === 'ar') {
+      document.body.classList.add('ar-active');
+    } else {
+      document.body.classList.remove('ar-active');
+    }
+  });
 });
