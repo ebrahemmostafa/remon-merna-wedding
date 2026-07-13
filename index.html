@@ -14,19 +14,20 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+  <button id="lang-toggle-btn" class="lang-toggle-btn">العربية</button>
   <!-- Envelope Intro -->
   <div class="envelope-wrapper" id="envelopeWrapper">
     <div class="envelope" id="envelope">
       <div class="flap"></div>
       <div class="card-peek">
         <div class="inner">
-          <p class="small">The grand celebration of</p>
-          <h3>Remon <em>&amp;</em> Merna</h3>
+          <p class="small" data-i18n="The grand celebration of">The grand celebration of</p>
+          <h3 data-i18n="Remon <em>&amp;</em> Merna">Remon <em>&amp;</em> Merna</h3>
         </div>
       </div>
       <div class="body-env"></div>
       <div class="seal"><img src="assets/ChatGPT Image Jun 27, 2026, 08_02_08 PM.png" alt="Wax seal" decoding="async"></div>
-      <span class="tap">Tap to open</span>
+      <span class="tap" data-i18n="Tap to open">Tap to open</span>
     </div>
   </div>
   <canvas id="particles"></canvas>
@@ -50,7 +51,7 @@
     <span class="audio-toggle__icon" id="audio-icon">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--burgundy)"><path d="M8 5v14l11-7z" /></svg>
     </span>
-    <span class="audio-toggle__label" id="audio-label">music</span>
+    <span class="audio-toggle__label" id="audio-label" data-i18n="music">music</span>
   </button>
 
   <main class="main">
@@ -61,29 +62,29 @@
         <div class="hero__veil"></div>
       </div>
       <div class="hero__content">
-        <p class="hero__eyebrow reveal" data-delay="2600">✦  Save the date  ✦</p>
+        <p class="hero__eyebrow reveal" data-delay="2600" data-i18n="✦  Save the date  ✦">✦  Save the date  ✦</p>
         <h1 class="hero__title reveal" data-delay="2800">
           Remon<span class="hero__amp">&amp;</span>Merna
         </h1>
         <div class="hero__rule reveal" data-delay="3400"></div>
-        <p class="hero__subtitle reveal" data-delay="3600">we are getting married</p>
+        <p class="hero__subtitle reveal" data-delay="3600" data-i18n="we are getting married">we are getting married</p>
         <div class="hero__card reveal" data-delay="4000">
           <div class="hero__card-col">
-            <span class="hero__small">Sunday</span>
+            <span class="hero__small" data-i18n="Sunday">Sunday</span>
             <span class="hero__big">30</span>
-            <span class="hero__small">Aug 2026</span>
+            <span class="hero__small" data-i18n="Aug 2026">Aug 2026</span>
           </div>
           <div class="hero__divider"></div>
           <div class="hero__card-col">
-            <span class="hero__small">Ceremony</span>
+            <span class="hero__small" data-i18n="Ceremony">Ceremony</span>
             <span class="hero__big">6:00</span>
-            <span class="hero__small">in the evening</span>
+            <span class="hero__small" data-i18n="in the evening">in the evening</span>
           </div>
           <div class="hero__divider hero__divider--md"></div>
           <div class="hero__card-col hero__card-col--md">
-            <span class="hero__small">Locations</span>
-            <span class="hero__big hero__big--sm">Giza &amp; Zamalek</span>
-            <span class="hero__small">Cairo · Egypt</span>
+            <span class="hero__small" data-i18n="Locations">Locations</span>
+            <span class="hero__big hero__big--sm" data-i18n="Giza &amp; Zamalek">Giza &amp; Zamalek</span>
+            <span class="hero__small" data-i18n="Cairo · Egypt">Cairo · Egypt</span>
           </div>
         </div>
       </div>
@@ -94,8 +95,8 @@
     <section class="photo-reveal" data-parallax-section>
       <div class="container">
         <div class="section-head fade-in-up">
-          <p class="eyebrow">Two souls</p>
-          <h2 class="display-h2">one journey</h2>
+          <p class="eyebrow" data-i18n="Two souls">Two souls</p>
+          <h2 class="display-h2" data-i18n="one journey">one journey</h2>
         </div>
         <div class="photo-reveal__single fade-in-up" data-parallax-y="80">
           <img src="assets/728277892_1016595234196831_1681627395698772978_n.jpg" alt="Remon and Merna romantic dinner" loading="lazy" />
@@ -107,26 +108,26 @@
     <section class="story">
       <div class="container">
         <div class="section-head fade-in-up">
-          <p class="eyebrow">Our story</p>
-          <h2 class="display-h2"><span class="doodle-underline">how it began</span></h2>
+          <p class="eyebrow" data-i18n="Our story">Our story</p>
+          <h2 class="display-h2"><span class="doodle-underline" data-i18n="how it began">how it began</span></h2>
         </div>
         <div class="story__list">
           <article class="chapter fade-in-up">
             <div class="chapter__media"><img src="assets/727988894_1892937321399738_5812794901894357382_n.jpg" alt="First glance" loading="lazy" /></div>
             <div class="chapter__body">
-              <h3 class="display-h3" style="font-size: 2rem; line-height: 1.4;">I’ve loved you for a lifetime in my dreams, today it becomes reality</h3>
+              <h3 class="display-h3" style="font-size: 2rem; line-height: 1.4;" data-i18n="story1">I’ve loved you for a lifetime in my dreams, today it becomes reality</h3>
             </div>
           </article>
           <article class="chapter chapter--reverse fade-in-up">
             <div class="chapter__media"><img src="assets/728369645_879745145182363_1172560505099690440_n.jpg" alt="Building memories" loading="lazy" /></div>
             <div class="chapter__body">
-              <h3 class="display-h3" style="font-size: 2rem; line-height: 1.4;">My heart had been searching for yours, long before our paths ever crossed</h3>
+              <h3 class="display-h3" style="font-size: 2rem; line-height: 1.4;" data-i18n="story2">My heart had been searching for yours, long before our paths ever crossed</h3>
             </div>
           </article>
           <article class="chapter fade-in-up">
             <div class="chapter__media"><img src="assets/728462402_27925573690368474_8689696960173259662_n.jpg" alt="The big question" loading="lazy" /></div>
             <div class="chapter__body">
-              <h3 class="display-h3" style="font-size: 2rem; line-height: 1.4;">We are choosing each other, today and every day after</h3>
+              <h3 class="display-h3" style="font-size: 2rem; line-height: 1.4;" data-i18n="story3">We are choosing each other, today and every day after</h3>
             </div>
           </article>
         </div>
@@ -137,13 +138,13 @@
     <section class="countdown">
       <div class="countdown__bg"></div>
       <div class="container container--narrow">
-        <p class="eyebrow eyebrow--light fade-in-up">counting every moment</p>
-        <h2 class="display-h2 display-h2--light fade-in-up">until forever</h2>
+        <p class="eyebrow eyebrow--light fade-in-up" data-i18n="counting every moment">counting every moment</p>
+        <h2 class="display-h2 display-h2--light fade-in-up" data-i18n="until forever">until forever</h2>
         <div class="countdown__grid" id="countdown">
-          <div class="countdown__cell"><div class="countdown__num" data-unit="days">00</div><div class="countdown__label">days</div></div>
-          <div class="countdown__cell"><div class="countdown__num" data-unit="hours">00</div><div class="countdown__label">hours</div></div>
-          <div class="countdown__cell"><div class="countdown__num" data-unit="minutes">00</div><div class="countdown__label">minutes</div></div>
-          <div class="countdown__cell"><div class="countdown__num" data-unit="seconds">00</div><div class="countdown__label">seconds</div></div>
+          <div class="countdown__cell"><div class="countdown__num" data-unit="days">00</div><div class="countdown__label" data-i18n="days">days</div></div>
+          <div class="countdown__cell"><div class="countdown__num" data-unit="hours">00</div><div class="countdown__label" data-i18n="hours">hours</div></div>
+          <div class="countdown__cell"><div class="countdown__num" data-unit="minutes">00</div><div class="countdown__label" data-i18n="minutes">minutes</div></div>
+          <div class="countdown__cell"><div class="countdown__num" data-unit="seconds">00</div><div class="countdown__label" data-i18n="seconds">seconds</div></div>
         </div>
       </div>
     </section>
@@ -152,12 +153,12 @@
     <section class="calendar">
       <div class="container container--narrow">
         <div class="section-head section-head--sm fade-in-up">
-          <p class="eyebrow">save the date</p>
-          <h2 class="display-h2">August 2026</h2>
+          <p class="eyebrow" data-i18n="save the date">save the date</p>
+          <h2 class="display-h2" data-i18n="August 2026">August 2026</h2>
         </div>
         <div class="calendar__card fade-in-up">
           <div class="calendar__grid" id="calendar-grid"></div>
-          <div class="calendar__footer">✦ Sunday · 6:00 pm ✦</div>
+          <div class="calendar__footer" data-i18n="✦ Sunday · 6:00 pm ✦">✦ Sunday · 6:00 pm ✦</div>
         </div>
       </div>
     </section>
@@ -169,23 +170,23 @@
         <div class="location__veil"></div>
       </div>
       <div class="location__content">
-        <p class="eyebrow eyebrow--light fade-in-up">where it happens</p>
+        <p class="eyebrow eyebrow--light fade-in-up" data-i18n="where it happens">where it happens</p>
         
         <div class="locations-grid fade-in-up">
           <div class="location-item">
-            <h3 class="display-h3 display-h3--light">The Church</h3>
-            <p class="location-time">6:00 PM — 7:00 PM</p>
+            <h3 class="display-h3 display-h3--light" data-i18n="The Church">The Church</h3>
+            <p class="location-time" data-i18n="6:00 PM — 7:00 PM">6:00 PM — 7:00 PM</p>
             <p class="location__address" style="direction: rtl;">5 ش الحجاز متفرع من ش جامعة الدول العربية<br>المهندسين, الجيزة قريب من وفد الاتحاد</p>
-            <a href="https://goo.gl/maps/Qw4KXQR7ynRgTdPt6?g_st=ac" target="_blank" rel="noopener noreferrer" class="btn btn--ghost">open in maps →</a>
+            <a href="https://goo.gl/maps/Qw4KXQR7ynRgTdPt6?g_st=ac" target="_blank" rel="noopener noreferrer" class="btn btn--ghost" data-i18n="open in maps →">open in maps →</a>
           </div>
 
           <div class="location-divider"></div>
 
           <div class="location-item">
-            <h3 class="display-h3 display-h3--light">Wedding Hall</h3>
-            <p class="location-time">8:00 PM — 12:00 AM</p>
+            <h3 class="display-h3 display-h3--light" data-i18n="Wedding Hall">Wedding Hall</h3>
+            <p class="location-time" data-i18n="8:00 PM — 12:00 AM">8:00 PM — 12:00 AM</p>
             <p class="location__address" style="direction: rtl;">دار المراسم لضباط الشرطة – شارع حديقة الزهرية<br>أمام برج القاهرة – الزمالك</p>
-            <a href="https://maps.app.goo.gl/Xvzy98qbDVQPbin78?g_st=ac" target="_blank" rel="noopener noreferrer" class="btn btn--ghost">open in maps →</a>
+            <a href="https://maps.app.goo.gl/Xvzy98qbDVQPbin78?g_st=ac" target="_blank" rel="noopener noreferrer" class="btn btn--ghost" data-i18n="open in maps →">open in maps →</a>
           </div>
         </div>
       </div>
@@ -197,9 +198,9 @@
     <section class="gallery">
       <div class="container">
         <div class="section-head fade-in-up">
-          <p class="eyebrow">moments</p>
-          <h2 class="display-h2">Frozen in time</h2>
-          <p class="gallery__hint">← drag to explore →</p>
+          <p class="eyebrow" data-i18n="moments">moments</p>
+          <h2 class="display-h2" data-i18n="Frozen in time">Frozen in time</h2>
+          <p class="gallery__hint" data-i18n="← drag to explore →">← drag to explore →</p>
         </div>
       </div>
       <div class="gallery__viewport" id="gallery-viewport">
@@ -211,47 +212,47 @@
     <section class="rsvp">
       <div class="container container--narrow">
         <div class="section-head section-head--sm fade-in-up">
-          <p class="eyebrow">be with us</p>
-          <h2 class="display-h2">Kindly reply</h2>
+          <p class="eyebrow" data-i18n="be with us">be with us</p>
+          <h2 class="display-h2" data-i18n="Kindly reply">Kindly reply</h2>
         </div>
         <form id="rsvp-form" class="rsvp__form fade-in-up">
           <div class="field">
-            <label>Your name</label>
+            <label data-i18n="Your name">Your name</label>
             <input type="text" name="name" required />
           </div>
           <div class="field">
-            <label>Email</label>
+            <label data-i18n="Email">Email</label>
             <input type="email" name="email" required />
           </div>
           <div class="field">
-            <label>Will you attend?</label>
+            <label data-i18n="Will you attend?">Will you attend?</label>
             <div class="radio-group">
               <label class="radio">
                 <input type="radio" name="attend" value="yes" checked />
-                <span>Joyfully accept</span>
+                <span data-i18n="Joyfully accept">Joyfully accept</span>
               </label>
               <label class="radio">
                 <input type="radio" name="attend" value="no" />
-                <span>Regretfully decline</span>
+                <span data-i18n="Regretfully decline">Regretfully decline</span>
               </label>
             </div>
           </div>
           <div class="field">
-            <label>Number of guests</label>
+            <label data-i18n="Number of guests">Number of guests</label>
             <input type="number" name="guests" min="1" max="10" />
           </div>
           <div class="field">
-            <label>A note for us</label>
+            <label data-i18n="A note for us">A note for us</label>
             <textarea name="note" rows="3"></textarea>
           </div>
           <button type="submit" class="btn btn--primary" id="rsvp-submit">
-            <span id="rsvp-submit-label">send rsvp</span>
+            <span id="rsvp-submit-label" data-i18n="send rsvp">send rsvp</span>
           </button>
         </form>
         <div class="rsvp__success" id="rsvp-success" hidden>
           <div class="rsvp__heart">♥</div>
-          <h3 class="display-h3">Thank you, beautifully received.</h3>
-          <p>We can't wait to see you in December.</p>
+          <h3 class="display-h3" data-i18n="Thank you, beautifully received.">Thank you, beautifully received.</h3>
+          <p data-i18n="We can\'t wait to see you in August.">We can\'t wait to see you in August.</p>
         </div>
       </div>
     </section>
@@ -259,24 +260,24 @@
     <!-- FINAL -->
     <section class="final">
       <div class="container container--narrow fade-in-up">
-        <p class="eyebrow">with all our love</p>
-        <h2 class="final__title">We can't wait<br /><span class="text-gradient-rose">to celebrate with you.</span></h2>
+        <p class="eyebrow" data-i18n="with all our love">with all our love</p>
+        <h2 class="final__title" data-i18n="We can\'t wait<br /><span class=\&quot;text-gradient-rose\&quot;>to celebrate with you.</span>">We can\'t wait<br /><span class="text-gradient-rose">to celebrate with you.</span></h2>
         <div class="final__rule"></div>
-        <p class="final__signature">Remon &amp; Merna</p>
+        <p class="final__signature" data-i18n="Remon &amp; Merna">Remon &amp; Merna</p>
       </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="footer">
       <div class="container footer__inner">
-        <div class="footer__col">remon &amp; merna</div>
-        <div class="footer__col footer__col--center">forever, beginning august thirty</div>
-        <div class="footer__col">cairo · 2026</div>
+        <div class="footer__col" data-i18n="remon &amp; merna">remon &amp; merna</div>
+        <div class="footer__col footer__col--center" data-i18n="forever, beginning august thirty">forever, beginning august thirty</div>
+        <div class="footer__col" data-i18n="cairo · 2026">cairo · 2026</div>
       </div>
     </footer>
   </main>
 
   <script src="js/script.js"></script>
-<script src="../invitation-language-switch.js"></script>
+  <script src="js/lang.js"></script>
 </body>
 </html>
