@@ -9,6 +9,13 @@
     if (!env || !wrapper) return;
     env.addEventListener('click', function () {
       env.classList.add('open');
+      
+      // Autoplay music upon interaction (tapping the envelope)
+      var audioBtn = document.getElementById('audio-toggle');
+      if (audioBtn) {
+        audioBtn.click();
+      }
+
       setTimeout(function () {
         wrapper.classList.add('opened');
         document.body.style.overflow = 'auto';
