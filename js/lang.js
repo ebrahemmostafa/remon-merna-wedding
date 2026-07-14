@@ -77,6 +77,7 @@ const translations = {
     "footer-names": "ريمون وميرنا",
     "footer-tagline": "إلى الأبد، بدءاً من الثلاثين من أغسطس",
     "footer-location": "القاهرة · 2026",
+    "made-with-love": "صُنع بحب بواسطة",
 
     // Audio
     "music": "موسيقى",
@@ -162,6 +163,7 @@ const translations = {
     "footer-names": "remon & merna",
     "footer-tagline": "forever, beginning august thirty",
     "footer-location": "cairo · 2026",
+    "made-with-love": "Made with love by",
 
     // Audio
     "music": "music",
