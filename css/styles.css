@@ -241,8 +241,8 @@ canvas#particles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
   color: oklch(0.38 0.12 18 / 0.7);
 }
 .hero__scroll span { font-size: 10px; letter-spacing: 0.4em; text-transform: uppercase; }
-.hero__scroll-line {
-  width: 1px; height: 40px; background: oklch(0.38 0.12 18 / 0.5);
+.hero__scroll-arrow {
+  color: oklch(0.38 0.12 18 / 0.5);
   animation: scroll-bounce 1.8s ease-in-out infinite;
 }
 @keyframes scroll-bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
