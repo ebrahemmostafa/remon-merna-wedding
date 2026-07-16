@@ -16,6 +16,7 @@ const translations = {
     "Locations": "الأماكن",
     "Giza-Zamalek": "الجيزة والزمالك",
     "Cairo · Egypt": "القاهرة · مصر",
+    "scroll-down": "تمرير",
 
     // Photo reveal
     "Two souls": "روحان",
@@ -102,6 +103,7 @@ const translations = {
     "Locations": "Locations",
     "Giza-Zamalek": "Giza & Zamalek",
     "Cairo · Egypt": "Cairo · Egypt",
+    "scroll-down": "scroll",
 
     // Photo reveal
     "Two souls": "Two souls",
