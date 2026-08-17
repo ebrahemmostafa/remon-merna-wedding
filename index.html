@@ -254,6 +254,7 @@
           <button type="submit" class="btn btn--primary" id="rsvp-submit">
             <span id="rsvp-submit-label" data-i18n="send rsvp">send rsvp</span>
           </button>
+          <p class="form-message" id="rsvp-message" hidden></p>
         </form>
         <div class="rsvp__success" id="rsvp-success" hidden>
           <div class="rsvp__heart">♥</div>
@@ -286,6 +287,9 @@
     </footer>
   </main>
 
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/rsvp-supabase.js"></script>
   <script src="js/script.js"></script>
   <script src="js/lang.js"></script>
 </body>

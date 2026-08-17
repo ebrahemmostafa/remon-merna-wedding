@@ -333,23 +333,4 @@
     }, { passive: false });
   })();
 
-  // ============= RSVP form =============
-  (function rsvp() {
-    var form = document.getElementById('rsvp-form');
-    var success = document.getElementById('rsvp-success');
-    var btn = document.getElementById('rsvp-submit');
-    var label = document.getElementById('rsvp-submit-label');
-    if (!form) return;
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      btn.disabled = true;
-      label.innerHTML = '<span class="spinner"></span>sending';
-      setTimeout(function () {
-        form.style.display = 'none';
-        success.hidden = false;
-        // trigger transition
-        requestAnimationFrame(function () { success.classList.add('show'); });
-      }, 1400);
-    });
-  })();
 })();
