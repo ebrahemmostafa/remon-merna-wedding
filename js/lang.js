@@ -131,7 +131,7 @@ const translations = {
 
     // Location
     "where it happens": "where it happens",
-    "The Church": "The Church",
+    "The Church": "Abu Sefein Church",
     "6:00 PM — 7:00 PM": "6:00 PM — 7:00 PM",
     "open in maps": "open in maps →",
     "Wedding Hall": "Wedding Hall",
